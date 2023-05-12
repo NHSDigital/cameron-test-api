@@ -1,0 +1,8 @@
+variables:
+  - group: status-endpoint
+  - name: service_name
+    value: cameron-test-api
+  - name: short_service_name
+    value: cta
+  - name: service_base_path
+    value: cameron-test-api
