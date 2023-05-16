@@ -62,7 +62,23 @@ async function hello(req, res, next) {
     next();
 }
 
+async function cameron(req,res,next) {
+    write_log(res, 'warn', {
+        message : "hey, you created and deployed an API! Well done!", 
+        req: {
+            path: req.path,
+            query: req.query,
+            headers: req.rawHeaders
+        }
+    });
+
+    res.json({message: "hey, you created and deployed an API! Well done!"});
+    res.end();
+    next();
+}
+
 module.exports = {
     status: status,
-    hello: hello
+    hello: hello,
+    cameron: cameron
 };
